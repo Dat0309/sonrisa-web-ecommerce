@@ -1,108 +1,36 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import $ from "jquery";
-import { useDispatch} from "react-redux";
-import { logout } from "../Redux/Actions/userActions";
 
 const Header = () => {
-  const dispatch = useDispatch();
 
-  useEffect(() => {
-    $("[data-trigger]").on("click", function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      var offcanvas_id = $(this).attr("data-trigger");
-      $(offcanvas_id).toggleClass("show");
-    });
-
-    $(".btn-aside-minimize").on("click", function () {
-      if (window.innerWidth < 768) {
-        $("body").removeClass("aside-mini");
-        $(".navbar-aside").removeClass("show");
-      } else {
-        // minimize sidebar on desktop
-        $("body").toggleClass("aside-mini");
-      }
-    });
-  }, [dispatch]);
-
-  const logoutHandler = () => {
-    dispatch(logout());
-  };
 
   return (
-    <header className="main-header navbar">
-      <div className="col-search">
-        <form className="searchform">
-          <div className="input-group">
-            <input
-              list="search_terms"
-              type="text"
-              className="form-control"
-              placeholder="Search term"
-            />
-            <button className="btn btn-light bg" type="button">
-              <i className="far fa-search"></i>
-            </button>
+    <>
+
+      <div id="head">
+        <div className="header">
+          <Link to={`/`} className="homepage">
+            <img className="logo" src="/images/sonrisa.png" alt="logo" />
+          </Link>
+          <div className="header__nav">
+            <ul class="nav__list">
+              <li class="nav__item"><Link to={"/product-store"} className="nav__link">CỬA HÀNG</Link></li>
+              <li class="nav__item"><Link to={"#"} className="nav__link">TIN TỨC</Link></li>
+              <li class="nav__item"><Link to={"#"} className="nav__link">GIỚI THIỆU</Link></li>
+              <li class="nav__item"><Link to={"#"} className="nav__link">TUYỂN DỤNG</Link></li>
+              <li class="nav__item"><Link to={"#"} className="nav__link">CHÍNH SÁCH</Link></li>
+              <li class="nav__item"><Link to={"#"} className="nav__link">WORLDWIDE SHIPPING</Link></li>
+              <li class="nav__item">
+                <Link to="#" class="nav__link">SHOPPING BAG (</Link>
+                <span>0</span>
+                <span>)</span>
+              </li>
+            </ul>
           </div>
-          <datalist id="search_terms">
-            <option value="Products" />
-            <option value="New orders" />
-            <option value="Apple iphone" />
-            <option value="Ahmed Hassan" />
-          </datalist>
-        </form>
+        </div>
       </div>
-      <div className="col-nav">
-        <button
-          className="btn btn-icon btn-mobile me-auto"
-          data-trigger="#offcanvas_aside"
-        >
-          <i className="md-28 fas fa-bars"></i>
-        </button>
-        <ul className="nav">
-          <li className="nav-item">
-            <Link className={`nav-link btn-icon `} title="Dark mode" to="#">
-              <i className="fas fa-moon"></i>
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link btn-icon" to="#">
-              <i className="fas fa-bell"></i>
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="#">
-              Việt Nam
-            </Link>
-          </li>
-          <li className="dropdown nav-item">
-            <Link className="dropdown-toggle" data-bs-toggle="dropdown" to="#">
-              <img
-                className="img-xs rounded-circle"
-                src="/images/logo.png"
-                alt="User"
-              />
-            </Link>
-            <div className="dropdown-menu dropdown-menu-end">
-              <Link className="dropdown-item" to="/">
-                Thông tin thống kê
-              </Link>
-              <Link className="dropdown-item" to="#">
-                Cài đặt
-              </Link>
-              <Link
-                onClick={logoutHandler}
-                className="dropdown-item text-danger"
-                to="#"
-              >
-                Đăng xuất
-              </Link>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </header>
+
+    </>
   );
 };
 

@@ -1,44 +1,57 @@
-import React, {  } from "react";
-import { useSelector } from "react-redux";
-import DeliveryStatistics from "./DeliveryStatistics";
-import LatestOrder from "./LatestOrder";
-import PaidStatistics from "./PaidStatistics";
-import ProductsStatistics from "./ProductsStatistics";
-import SaleStatistics from "./SalesStatistics";
-import TopTotal from "./TopTotal";
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Main = () => {
-  const orderList = useSelector((state) => state.orderList);
-  const { loading, error, orders } = orderList;
-  const productList = useSelector((state) => state.productList);
-  const { products } = productList;
+
+  const backgroundStyle = {
+    backgroundImage: `linear-gradient(180deg, rgba(85, 83, 83, 0.3), rgba(67, 65, 65, 0.3)), url(/images/NGANG/1.png)`,
+
+    backgroundSize: "cover",
+}
+
+const backgroundStyle2 = {
+  backgroundImage: `url(/images/NGANG/preview1.png)`,
+
+    backgroundSize: "cover",
+}
+
+const backgroundStyle3 = {
+  backgroundImage: `url(/images/NGANG/preview2.png)`,
+
+    backgroundSize: "cover",
+}
+
+const backgroundStyle4 = {
+  backgroundImage: `url(/images/NGANG/preview3.png)`,
+
+    backgroundSize: "cover",
+}
 
   return (
     <>
-    <section className="content-main">
-      <div className="content-header">
-        <h2 className="content-title"> Dashboard </h2>
-      </div>
-      {/* Top Total */}
-      <TopTotal orders={orders} products={products} />
+      <div className="grid"
+        style={backgroundStyle}></div>
+      <div className="grid"
+        style={backgroundStyle2}></div>
+      <div className="grid"
+        style={backgroundStyle3}></div>
+        <div className="grid"
+        style={backgroundStyle4}></div>
 
-      <div className="row">
-        {/* STATICS */}
-        <SaleStatistics />
-        <ProductsStatistics />
+      <div className="product-container">
+        <div className="product-container__box">
+          <Link className="product-container__link">
+            <img src="/images/VUONG/product1.jpg" alt="" className="product-container__img" />
+          </Link>
+          <Link className="product-container__link">
+            <img src="/images/VUONG/product2.jpg" alt="" className="product-container__img" />
+          </Link>
+          <Link className="product-container__link">
+            <img src="/images/VUONG/product3.jpg" alt="" className="product-container__img" />
+          </Link>
+        </div>
       </div>
-      <div className="row">
-        {/* STATICS */}
-        <PaidStatistics />
-        <DeliveryStatistics />
-      </div>
-
-      {/* LATEST ORDER */}
-      <div className="card mb-4 shadow-sm">
-        <LatestOrder orders={orders} loading={loading} error={error} />
-      </div>
-    </section>
-  </>
+    </>
   );
 };
 
