@@ -9,10 +9,6 @@ import { restaurantByOwners } from "../Redux/Actions/RestaurantActions";
 import Sidebar from "./../components/sidebar";
 
 const HomeScreen = () => {
-  const myRestaurant = useSelector((state) => state.restaurantOfOwners);
-  const { restaurant } = myRestaurant;
-  const userLogin = useSelector((state) => state.userLogin);
-  const { userInfo } = userLogin;
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -23,17 +19,7 @@ const HomeScreen = () => {
       <Sidebar />
       <main className="main-wrap">
         <Header />
-        {userInfo.role === "admin" ? (
           <Main />
-        ) : userInfo.role === "owners" ? (
-          restaurant.length === 0 ? (
-            <Loading />
-          ) : (
-            <MainRestaurant restaurant={restaurant[0]} />
-          )
-        ) : (
-          <></>
-        )}
       </main>
     </>
   );
