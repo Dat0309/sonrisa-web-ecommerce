@@ -18,7 +18,7 @@ const MainHeader = () => {
                     </li>
                     <li className="sidebar-nav__item">
                         {" "}
-                        <Link to={'#'} className="sidebar-nav__link">
+                        <Link to={'/shopping-bag'} className="sidebar-nav__link">
                             GIỎ HÀNG (0)
                         </Link>
                     </li>

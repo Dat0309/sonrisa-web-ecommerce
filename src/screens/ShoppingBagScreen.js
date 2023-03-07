@@ -1,15 +1,13 @@
 import Footer from "../components/Footer";
-import MainHeader from "../components/MainHeader";
 import MainShopping from "../components/Shopping/MainShopping";
+import Sidebar from "../components/sidebar";
 
 const ShoppingBagScreen = () => {
     return (
         <>
-             <div className="sidebar-nav">
-                <MainHeader />
-            </div>
-            <MainShopping/>
-            <Footer/>
+            <Sidebar />
+            <MainShopping />
+            <Footer />
         </>
     );
 };
