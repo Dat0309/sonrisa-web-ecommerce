@@ -1,11 +1,13 @@
+import Footer from "../components/Footer";
 import Sidebar from "../components/sidebar";
-import Product from "../components/Store/Product";
+import ListProduct from "../components/Store/Product/ListProduct";
 
 const StoreScreen = () => {
     return (
         <>
-            <Sidebar/>
-            <Product/>
+            <Sidebar />
+            <ListProduct />
+            <Footer />
         </>
     );
 };

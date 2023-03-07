@@ -14,8 +14,8 @@ const Header = () => {
           </Link>
           <div className="header__nav">
             <ul class="nav__list">
-              <li class="nav__item"><Link to={"/product-store"} className="nav__link">CỬA HÀNG</Link></li>
-              <li class="nav__item"><Link to={"#"} className="nav__link">TIN TỨC</Link></li>
+              <li class="nav__item"><Link to={"/products"} className="nav__link">CỬA HÀNG</Link></li>
+              <li class="nav__item"><Link to={"/news"} className="nav__link">TIN TỨC</Link></li>
               <li class="nav__item"><Link to={"#"} className="nav__link">GIỚI THIỆU</Link></li>
               <li class="nav__item"><Link to={"#"} className="nav__link">TUYỂN DỤNG</Link></li>
               <li class="nav__item"><Link to={"#"} className="nav__link">CHÍNH SÁCH</Link></li>

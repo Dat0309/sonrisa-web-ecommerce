@@ -40,13 +40,13 @@ const backgroundStyle4 = {
 
       <div className="product-container">
         <div className="product-container__box">
-          <Link className="product-container__link">
+          <Link to={`/product/1`} className="product-container__link">
             <img src="/images/VUONG/product1.jpg" alt="" className="product-container__img" />
           </Link>
-          <Link className="product-container__link">
+          <Link to={`/product/1`} className="product-container__link">
             <img src="/images/VUONG/product2.jpg" alt="" className="product-container__img" />
           </Link>
-          <Link className="product-container__link">
+          <Link to={`/product/1`} className="product-container__link">
             <img src="/images/VUONG/product3.jpg" alt="" className="product-container__img" />
           </Link>
         </div>

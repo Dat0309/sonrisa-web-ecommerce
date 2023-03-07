@@ -1,152 +1,136 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import MainHeader from "./MainHeader";
 
 const Sidebar = () => {
   return (
     <>
+
       <nav className="sidebar-nav">
-        <div className="side-bar-top__menu">
-          <Link to={"/"} className="homepage">
-            <img className="logo" src="images/sonrisa.png" alt="logo" />
-          </Link>
-          <ul className="sidebar-nav__list">
-            <li className="sidebar-nav__item">
-              <Link to={'#'} className="sidebar-nav__link">
-                <i className="sidebar-nav__icon fas fa-solid fa-user" />
-                SEACH A PRODUCT
-                <i className="sidebar-nav__icon fas fa-solid fa-magnifying-glass" />
-              </Link>
-            </li>
-            <li className="sidebar-nav__item">
-              {" "}
-              <Link to={'#'} className="sidebar-nav__link">
-                SHOPPING BAG (0)
-              </Link>
-            </li>
-          </ul>
-        </div>
+        <MainHeader />
         <div className="sidebar-slide__menu">
           <ul className="sidebar-slide__list">
             <li>
-              <Link to={"#"}>NEW ARIVAL</Link>
+              <Link className="sidebar-nav__link" to={"#"}>NEW ARIVAL</Link>
             </li>
             <li>
-              <Link to={"#"}>WORLDWIDDE SHIPPING</Link>
+              <Link className="sidebar-nav__link" to={"#"}>WORLDWIDDE SHIPPING</Link>
             </li>
             <li>
-              <Link to="">MENSWEAR</Link>
+              <Link className="sidebar-nav__link" to="">MENSWEAR</Link>
             </li>
             <li>
-              <Link to="">WOMENSWEaR</Link>
+              <Link className="sidebar-nav__link" to="">WOMENSWEaR</Link>
             </li>
             <li>
-              <Link to="">COLLECTIONS</Link>
+              <Link className="sidebar-nav__link" to="">COLLECTIONS</Link>
             </li>
             <ul className="sidebar-sub__menu">
               <li>
-                <Link to="">SPRING'23 PROGRESS OF RENOVATION</Link>
+                <Link className="sidebar-nav-sub__link" to="">SPRING'23 PROGRESS OF RENOVATION</Link>
               </li>
               <li>
-                <Link to="">FRAME THE BLOOM</Link>
+                <Link className="sidebar-nav-sub__link" to="">FRAME THE BLOOM</Link>
               </li>
               <li>
-                <Link to="">RESORT"22</Link>
+                <Link className="sidebar-nav-sub__link" to="">RESORT"22</Link>
               </li>
               <li>
-                <Link to="">SPRING SUMMER 2022</Link>
+                <Link className="sidebar-nav-sub__link" to="">SPRING SUMMER 2022</Link>
               </li>
               <li>
-                <Link to="">BLANKS BY BEUTER</Link>
+                <Link className="sidebar-nav-sub__link" to="">BLANKS BY BEUTER</Link>
               </li>
             </ul>
             <li>
-              <Link to="">TOPS</Link>
+              <Link className="sidebar-nav__link" to="">TOPS</Link>
             </li>
             <ul className="sidebar-sub__menu">
               <li>
-                <Link to="">Graphic t-shirt</Link>
+                <Link className="sidebar-nav-sub__link" to="">Graphic t-shirt</Link>
               </li>
               <li>
-                <Link to="">Long sleeve</Link>
+                <Link className="sidebar-nav-sub__link" to="">Long sleeve</Link>
               </li>
               <li>
-                <Link to="">Blank t-shirt</Link>
+                <Link className="sidebar-nav-sub__link" to="">Blank t-shirt</Link>
               </li>
               <li>
-                <Link to="">Blank long sleeve</Link>
+                <Link className="sidebar-nav-sub__link" to="">Blank long sleeve</Link>
               </li>
               <li>
-                <Link to="">Hoodies</Link>
+                <Link className="sidebar-nav-sub__link" to="">Hoodies</Link>
               </li>
               <li>
-                <Link to="">Sweaters</Link>
+                <Link className="sidebar-nav-sub__link" to="">Sweaters</Link>
               </li>
               <li>
-                <Link to="">Jackets</Link>
+                <Link className="sidebar-nav-sub__link" to="">Jackets</Link>
               </li>
               <li>
-                <Link to="">Shirts</Link>
+                <Link className="sidebar-nav-sub__link" to="">Shirts</Link>
               </li>
             </ul>
             <li>
-              <Link to="">BOTTOMS</Link>
+              <Link className="sidebar-nav__link" to="">BOTTOMS</Link>
             </li>
             <ul className="sidebar-sub__menu">
               <li>
-                <Link to="">Jeans</Link>
+                <Link className="sidebar-nav-sub__link" to="">Jeans</Link>
               </li>
               <li>
-                <Link to="">Trousers</Link>
+                <Link className="sidebar-nav-sub__link" to="">Trousers</Link>
               </li>
               <li>
-                <Link to="">Sweatpants</Link>
+                <Link className="sidebar-nav-sub__link" to="">Sweatpants</Link>
               </li>
               <li>
-                <Link to="">Khaki pants</Link>
+                <Link className="sidebar-nav-sub__link" to="">Khaki pants</Link>
               </li>
               <li>
-                <Link to="">Shorts</Link>
+                <Link className="sidebar-nav-sub__link" to="">Shorts</Link>
               </li>
             </ul>
             <li>
-              <Link to="">ACCESSORIES</Link>
+              <Link className="sidebar-nav__link" to="">ACCESSORIES</Link>
             </li>
             <ul className="sidebar-sub__menu">
               <li>
-                <Link to="">Backpacks</Link>
+                <Link className="sidebar-nav-sub__link" to="">Backpacks</Link>
               </li>
               <li>
-                <Link to="">Bags</Link>
+                <Link className="sidebar-nav-sub__link" to="">Bags</Link>
               </li>
               <li>
-                <Link to="">Straps</Link>
+                <Link className="sidebar-nav-sub__link" to="">Straps</Link>
               </li>
               <li>
-                <Link to="">Caps</Link>
+                <Link className="sidebar-nav-sub__link" to="">Caps</Link>
               </li>
               <li>
-                <Link to="">SOCKS</Link>
+                <Link className="sidebar-nav-sub__link" to="">SOCKS</Link>
               </li>
             </ul>
             <li>
-              <Link to="">TIN TỨC</Link>
+              <Link className="sidebar-nav__link" to="">TIN TỨC</Link>
             </li>
             <li>
-              <Link to="">GIỚI THIỆU</Link>
+              <Link className="sidebar-nav__link" to="">GIỚI THIỆU</Link>
             </li>
             <li>
-              <Link to="">TRA SOÁT ĐƠN HÀNG</Link>
+              <Link className="sidebar-nav__link" to="">TRA SOÁT ĐƠN HÀNG</Link>
             </li>
             <ul className="sidebar-sub__menu">
               <li>
-                <Link to="">TIẾNG VIỆT</Link>
+                <Link className="sidebar-nav-sub__link" to="">TIẾNG VIỆT</Link>
               </li>
               <li>
-                <Link to="">ENGLISH</Link>
+                <Link className="sidebar-nav-sub__link" to="">ENGLISH</Link>
               </li>
             </ul>
           </ul>
         </div>
+        
       </nav>
 
     </>

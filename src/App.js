@@ -9,6 +9,9 @@ import HomeScreen from "./screens/HomeScreen";
 import NotFound from "./screens/NotFound";
 import PrivateRouter from "./PrivateRouter";
 import StoreScreen from "./screens/StoreScreen";
+import MainProductDetailScreen from "./screens/MainProductDetailScreen";
+import NewsScreen from "./screens/NewsScreen";
+import ShoppingBagScreen from "./screens/ShoppingBagScreen";
 
 function App() {
 
@@ -16,8 +19,11 @@ function App() {
     <>
       <Router>
         <Switch>
-          <PrivateRouter path="/product-store" component={StoreScreen} exact />
+          <PrivateRouter path="/products" component={StoreScreen} exact />
+          <PrivateRouter path="/product/:id" component={MainProductDetailScreen} exact/>
           <PrivateRouter path="/" component={HomeScreen} exact />
+          <PrivateRouter path="/news" component={NewsScreen} exact/>
+          <PrivateRouter path="/shopping-bag" component={ShoppingBagScreen} exact/>
           <PrivateRouter path="*" component={NotFound} />
         </Switch>
       </Router>
